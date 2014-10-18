@@ -1,0 +1,1 @@
+alias nom="rm -rf node_modules bower_components && npm cache clear && npm install"
