@@ -35,6 +35,18 @@ ask() {
   done
 }
 
+# Read and store git user name and email
+read_git_config() {
+  GIT_USER_NAME="$( git config --global user.name )"
+  GIT_USER_EMAIL="$( git config --global user.email )"
+}
+
+# Write git user name and email from previously stored values
+write_git_config() {
+  git config --global user.name "$GIT_USER_NAME"
+  git config --global user.email "$GIT_USER_EMAIL"
+}
+
 # Copy a file from source to destination with a safe backup
 # Syntax: safe_copy <src> <dst>
 safe_copy() {
@@ -81,7 +93,9 @@ copy_dotfiles() {
 }
 
 main() {
+  read_git_config
   copy_dotfiles
+  write_git_config
   setup_vim
 }
 
