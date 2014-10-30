@@ -16,8 +16,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 "============================================================
 " Plugins end here
 "============================================================
@@ -27,6 +30,9 @@ call vundle#end() " [required]
 
 syntax on
 filetype plugin indent on
+
+" Show line numbers
+set number
 
 " Solarized color scheme
 syntax enable
@@ -45,7 +51,7 @@ set splitbelow
 set tabstop=2 shiftwidth=2 expandtab
 
 " Show hidden files in NERDTree
-" let NERDTreeShowHidden=1
+let NERDTreeShowHidden=1
 
 " Always show airline (statusline)
 set laststatus=2
@@ -61,6 +67,9 @@ set mouse=a
 
 " JSHint
 let g:syntastic_javascript_checkers = ['jshint']
+
+" Use Ag for search
+let g:agprg="ag --column"
 
 " Use JavaScript syntax highlighting for JSON
 autocmd BufNewFile,BufRead *.json set ft=javascript
