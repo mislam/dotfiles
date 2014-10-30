@@ -64,3 +64,14 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " Use JavaScript syntax highlighting for JSON
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" Auto-open NERDTree when VIM starts without an argument
+function! StartUp()
+  if 0 == argc()
+    NERDTree  " Open NERDTree
+    wincmd w  " Switch to the empty split
+    wincmd q  " Close the empty split
+  end
+endfunction
+
+autocmd VimEnter * call StartUp()
