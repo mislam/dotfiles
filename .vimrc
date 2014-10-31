@@ -34,6 +34,9 @@ filetype plugin indent on
 " Show line numbers
 set number
 
+" Highlight search results
+set hlsearch
+
 " Solarized color scheme
 syntax enable
 set background=dark
