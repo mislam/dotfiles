@@ -34,6 +34,10 @@ filetype plugin indent on
 " Show line numbers
 set number
 
+" Show invisible characters
+set list
+set listchars=tab:>-,trail:.,extends:>,precedes:<
+
 " Highlight search results
 set hlsearch
 
@@ -87,3 +91,14 @@ function! StartUp()
 endfunction
 
 autocmd VimEnter * call StartUp()
+
+
+" ============
+" Key Bindings
+" ============
+
+" File tree browser
+map \           :NERDTreeToggle<CR>
+
+" File tree browser showing current file - pipe (shift-backslash)
+map \|          :NERDTreeFind<CR>
