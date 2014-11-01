@@ -31,6 +31,9 @@ call vundle#end() " [required]
 syntax on
 filetype plugin indent on
 
+" Make backspace work like most other apps
+set backspace=2
+
 " Show line numbers
 set number
 
