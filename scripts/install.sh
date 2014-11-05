@@ -67,7 +67,11 @@ setup_vim() {
     fi
   fi
 
-  rm -rf $vimdir
+  # Recreate .vim directory
+  rm -rf $vimdir && mkdir $vimdir
+
+  # Create backups, swaps and undo directories
+  mkdir $vimdir/backups $vimdir/swaps $vimdir/undo
 
   echo -e "\n$(tput setaf 7)Installing Vundle...$(tput sgr 0)"
   git clone https://github.com/gmarik/Vundle.vim $vimdir/bundle/vundle.vim

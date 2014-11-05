@@ -81,8 +81,22 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Use Ag for search
 let g:agprg="ag --column"
 
-" Use JavaScript syntax highlighting for JSON
-autocmd BufNewFile,BufRead *.json set ft=javascript
+" Enable file type detection
+filetype on
+
+" Treat .json files as .js
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+" Treat .md files as Markdown
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+
+" Set backup, swap and undo directories
+set swapfile
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
 
 " Auto-open NERDTree when VIM starts without an argument
 function! StartUp()
