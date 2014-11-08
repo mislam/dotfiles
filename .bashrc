@@ -11,7 +11,7 @@ export PROMPT_COMMAND="__update_ps1; $PROMPT_COMMAND"
 export PATH="/usr/local/bin:$PATH"
 
 # Add android SDK tools to the PATH
-if [[ -d "$PATH:/Applications/Android Studio.app" ]]; then
+if [[ -d "/Applications/Android Studio.app" ]]; then
   export PATH="$PATH:/Applications/Android Studio.app/sdk/platform-tools"
   export PATH="$PATH:/Applications/Android Studio.app/sdk/tools"
 fi
