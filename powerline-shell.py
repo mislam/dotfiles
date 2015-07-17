@@ -187,7 +187,7 @@ class Color(DefaultColor):
     PATH_FG = 7
     PATH_BG = 10
     CWD_FG = 15
-    SEPARATOR_FG = 14
+    SEPARATOR_FG = 11
 
     READONLY_BG = 1
     READONLY_FG = 7

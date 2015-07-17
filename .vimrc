@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 "============================================================
 " Plugins start here
 "============================================================
+Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
@@ -48,7 +49,7 @@ set hlsearch
 syntax enable
 set background=dark
 :if !empty(glob("$HOME/.vim/bundle/vim-colors-solarized"))
-  colorscheme solarized
+  colorscheme base16-default
 endif
 
 " Vertical split appears to the right
