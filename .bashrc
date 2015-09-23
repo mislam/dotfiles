@@ -10,12 +10,6 @@ export PROMPT_COMMAND="__update_ps1; $PROMPT_COMMAND"
 # Use latest version of Git instead of Apple Git
 export PATH="/usr/local/bin:$PATH"
 
-# Add android SDK tools to the PATH
-if [[ -d "$HOME/Development/android-sdk" ]]; then
-  export PATH="$PATH:$HOME/Development/android-sdk/platform-tools"
-  export PATH="$PATH:$HOME/Development/android-sdk/tools"
-fi
-
 # Load NVM
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
 
